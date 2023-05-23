@@ -1,14 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View, ActivityIndicator  } from 'react-native';
-import ProgressBar from 'react-native-progress/Bar';
+import { StyleSheet, Text, TouchableOpacity, View, ActivityIndicator, Alert  } from 'react-native';
+import * as Progress from 'react-native-progress';
 
 export default function App() {
   const handlePress=()=>{
-    console.log('Hello!')
+    console.log(`Hello! Time now is ${new Date().toLocaleTimeString()}`);
+    Alert.alert(`Hello! Time now is ${new Date().toLocaleTimeString()}`)
   }
   return (
     <View style={styles.container}>
-      <ProgressBar progress={0.3} width={200} />
+      <Progress.Bar progress={0.3} width={200} />
       <ActivityIndicator size="large" color="#fff"/>
       <Text style={styles.heading}>Hello World!</Text>
       <TouchableOpacity style={styles.button} onPress={handlePress}>
