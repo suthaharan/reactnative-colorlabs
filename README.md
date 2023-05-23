@@ -81,6 +81,7 @@ $ npm start (starts expo application in port 19000 in local environment)
 
 ```
 * Scan the QR code from. Expo gives a DNS name to the application via a tunnel and you can view the app in the mobile phone.
+* The metro bundler UI has been deprecated and not even bundled with expo-cli@6.0.0 onwards.
 * To enable web based view of the app, the following libraries need to be installed. Then you can press "w" to open in web view (or issue the command npm run web)
 ```
 npm install react-native-web@~0.18.10, react-dom@18.2.0, @expo/webpack-config@^18.0.1
@@ -132,3 +133,11 @@ const styles = StyleSheet.create({
   }
 });
 ```
+
+##### Components and API's
+* Native components
+  * Comes with set of UI components
+  * We were using View, Text components
+  * Use ActivityIndicator
+* Native API's
+* 

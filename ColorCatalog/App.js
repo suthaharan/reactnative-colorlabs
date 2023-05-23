@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, ActivityIndicator  } from 'react-native';
+import ProgressBar from 'react-native-progress/Bar';
 
 export default function App() {
   const handlePress=()=>{
@@ -7,6 +8,8 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
+      <ProgressBar progress={0.3} width={200} />
+      <ActivityIndicator size="large" color="#fff"/>
       <Text style={styles.heading}>Hello World!</Text>
       <TouchableOpacity style={styles.button} onPress={handlePress}>
         <Text style={styles.buttonText}>Say Hello!</Text>
