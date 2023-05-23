@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View, ActivityIndicator, Alert  } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, ActivityIndicator, Alert, Dimensions, Platform  } from 'react-native';
 import * as Progress from 'react-native-progress';
+
+const {height, width} = Dimensions.get('window');
 
 export default function App() {
   const handlePress=()=>{
@@ -9,12 +11,15 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Progress.Bar progress={0.3} width={200} />
+      {Platform.OS==="android" && <Progress.Bar progress={0.3} width={200} />}
       <ActivityIndicator size="large" color="#fff"/>
       <Text style={styles.heading}>Hello World!</Text>
       <TouchableOpacity style={styles.button} onPress={handlePress}>
         <Text style={styles.buttonText}>Say Hello!</Text>
       </TouchableOpacity>
+      <Text>OS: {Platform.OS}</Text>
+      <Text>Height: {height}</Text>
+      <Text>Width: {width}</Text>
       <StatusBar style="auto" />
     </View>
   );
