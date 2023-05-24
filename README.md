@@ -196,3 +196,10 @@ const styles = StyleSheet.create({
 });
 
 ```
+
+##### Async Storage
+* Allows data storage in local phone
+* Async storage has been removed from react native core. Needs import from @react-native-async-storage/async-storage
+```
+npx expo install @react-native-async-storage/async-storage@1.17.11
+```
