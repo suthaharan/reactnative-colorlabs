@@ -147,3 +147,5 @@ const styles = StyleSheet.create({
   * Default direction is column and you will use flexDirection: "row"
   * "flex" attributes tells the flex element how to fill up the space. Flex 1 evenly distributes the element across the row
 * Image component
+
+##### Custom hook
