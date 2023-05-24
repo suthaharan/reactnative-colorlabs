@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { StyleSheet, FlatList  } from 'react-native';
+import { Text, StyleSheet, FlatList  } from 'react-native';
 import ColorButton from "./ColorButton";
 import ColorForm from "./ColorForm";
 import {useColors} from "../hooks/useColors";
@@ -11,6 +11,7 @@ export default function ColorList({navigation}) {
 
   return (
     <>
+      <Text onPress={() => navigation.navigate("Users")}>Users</Text>
       <ColorForm onNewColor={addColor}/>
       <FlatList style={[styles.container]} 
         data={colors}
