@@ -1,9 +1,9 @@
 ### React Native with Expo
 
 ##### References
-* React
+* React - https://reactnative.dev/docs/getting-started
 * Expo - https://docs.expo.dev/
-* Snack tool
+* Snack tool - https://snack.expo.dev/?platform=android
 
 
 ##### React Native
@@ -140,4 +140,10 @@ const styles = StyleSheet.create({
   * We were using View, Text components
   * Use ActivityIndicator
 * Native API's
-* 
+  * API's is an acronymn giving access to underlying features of the application/phone
+  * ActivityIndicator, Button, ProgressBar, Alert, 
+* Layouts
+  * Flex influences the layout in RN
+  * Default direction is column and you will use flexDirection: "row"
+  * "flex" attributes tells the flex element how to fill up the space. Flex 1 evenly distributes the element across the row
+* Image component
