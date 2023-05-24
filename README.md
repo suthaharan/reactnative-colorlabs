@@ -203,3 +203,60 @@ const styles = StyleSheet.create({
 ```
 npx expo install @react-native-async-storage/async-storage@1.17.11
 ```
+
+##### React Navigation
+* Visit https://reactnavigation.org/docs/getting-started/
+
+```
+$ npm install @react-navigation/native @react-navigation/stack
+$ npx expo install react-native-screens react-native-safe-area-context
+
+```
+* To get color details, install npm package color
+```
+$ npm install -S color
+```
+
+
+##### Publishing app
+* Reference: https://pagepro.co/blog/publishing-expo-react-native-app-to-ios-and-android/
+* Most of the application information is there in the javascript bundle
+* Modifying icon and splash in the app.json which has important configuration details
+* To publish to expo, stop  the app and restart the app to see the changes
+```
+$ npm install -g expo-cli
+$ expo build
+$ expo publish
+
+This will give a URL where the files are published. The URL will have QR code which you can scan to run the app
+```
+
+
+* Open the URL from the build so you can test the app.
+* When publishing for iOS devices
+```
+Edit app.json to add in bundleIdentifier, buildNumber
+
+$ expo build:ios (to build the app in their own servers)
+$ expo build:status
+
+Download the application as a zip file and then extract it (tar -xvzf ColorCatalog.app). 
+
+$ xcrun simctl install booted ColorCatalog.app (booted tells the app to run in the simulator that is currently running)
+
+Now you can distribute this app.
+```
+
+* Building the APP in ANDROID
+```
+$ expo build:android
+
+You can monitor the progress of the build using the URL given
+
+To play the app, drag and drop the apk file in the simulator.
+```
+
+* Ejecting the Expo app (to gthe ios and android source files)
+```
+$ expo eject
+```

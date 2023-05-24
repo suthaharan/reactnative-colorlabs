@@ -15,6 +15,7 @@
     "@react-navigation/stack": "^6.3.16",
     "color": "^4.2.3",
     "expo": "~48.0.15",
+    "expo-cli": "^6.3.7",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
@@ -23,7 +24,8 @@
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
     "react-native-web": "^0.18.12",
-    "shortid": "^2.2.16"
+    "shortid": "^2.2.16",
+    "expo-updates": "~0.16.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
