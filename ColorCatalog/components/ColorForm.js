@@ -5,7 +5,7 @@ function ColorForm({onNewColor = f => f}) {
     const [inputValue, setValue ] = useState("");
     const input = useRef();
 
-    console.log(" -> ", inputValue);
+    //console.log(" -> ", inputValue);
     return (
         <View style={styles.container}>
             <TextInput 
@@ -31,9 +31,9 @@ function ColorForm({onNewColor = f => f}) {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 40,
         flexDirection: "row",
-        alignItems: "center"
+        alignItems: "center",
+        backgroundColor: "white"
     },
     txtInput:{
         flex: 1,
